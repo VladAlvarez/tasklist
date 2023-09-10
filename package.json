@@ -1,0 +1,20 @@
+{
+  "name": "tasklist",
+  "version": "1.0.0",
+  "description": "task list",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "task",
+    "rest",
+    "api"
+  ],
+  "author": "Vlad Alvarez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
