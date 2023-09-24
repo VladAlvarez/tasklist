@@ -21,7 +21,10 @@ app.get('/task-api', (req, res) => {
 
 app.post('/task-api', (req,res) => {
     let task = req.body.task
+    let {description, status, dueDate} = req.body
+    console.log(req.body);
     console.log(`${task}`);
+    console.log(description, status, dueDate);
     task = `new task is ${task}`
     res.json({"name" : task})
 })

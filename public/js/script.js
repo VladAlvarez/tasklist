@@ -14,14 +14,20 @@ async function fetchTasks(){
 async function addTask(event){
     event.preventDefault();
     const aTask = document.getElementById('newTask').value
-
+    const description = document.getElementById('description').value
+    const status = document.getElementById('status').value
+    const dueDate = document.getElementById('dueDate').value
+    
     const response = await fetch(apiurl, {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
         }, 
         body: JSON.stringify({
-            task:aTask
+            task:aTask,
+            description,
+            status,
+            dueDate
         })
     })
     const data = await response.json()
